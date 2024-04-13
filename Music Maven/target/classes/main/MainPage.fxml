@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import io.github.palexdev.materialfx.controls.MFXProgressBar?>
+<?import io.github.palexdev.materialfx.controls.MFXProgressSpinner?>
+<?import io.github.palexdev.materialfx.controls.MFXTableView?>
+<?import io.github.palexdev.materialfx.controls.MFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+
+<BorderPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.Controller">
+   <center>
+      <VBox alignment="TOP_CENTER" spacing="20.0" styleClass="background" stylesheets="@Styles.css">
+          <padding>
+              <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+          </padding>
+         <children>
+            <HBox>
+               <children>
+                  <MFXTextField fx:id="urlField" floatingText="Enter URL" maxWidth="1.7976931348623157E308" prefHeight="46.0" prefWidth="507.0" styleClass="textField" HBox.hgrow="ALWAYS" />
+                  <MFXButton fx:id="submitButton" onAction="#addSong" prefHeight="46.0" prefWidth="120.0" styleClass="btn" text="Submit" HBox.hgrow="NEVER">
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                     <graphic>
+                        <FontIcon iconLiteral="win10-chevron-down-round" iconSize="25" />
+                     </graphic>
+                  </MFXButton>
+               </children>
+            </HBox>
+            <HBox VBox.vgrow="ALWAYS">
+               <children>
+                  <MFXTableView fx:id="songTable" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="293.0" prefWidth="660.0" HBox.hgrow="ALWAYS" />
+                  <VBox alignment="TOP_CENTER" minWidth="-Infinity" prefHeight="494.0" prefWidth="120.0" HBox.hgrow="NEVER">
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                     <children>
+                        <MFXButton fx:id="deleteButton" maxWidth="1.7976931348623157E308" onAction="#delete" prefHeight="46.0" prefWidth="200.0" styleClass="btn" text="Delete">
+                           <graphic>
+                              <FontIcon iconLiteral="win10-minus" iconSize="25" />
+                           </graphic>
+                        </MFXButton>
+                        <MFXButton fx:id="locationButton" layoutX="10.0" layoutY="66.0" onAction="#chooseLocation" prefHeight="46.0" prefWidth="120.0" styleClass="btn" text="Location">
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font size="28.0" />
+                           </font>
+                        </MFXButton>
+                        <MFXButton fx:id="downloadButton" onAction="#download" prefHeight="46.0" prefWidth="120.0" styleClass="btn" text="Download">
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </MFXButton>
+                        <Region prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS" />
+                        <HBox alignment="CENTER">
+                           <VBox.margin>
+                              <Insets bottom="10.0" />
+                           </VBox.margin>
+                           <children>
+                              <Label text="In Queue:">
+                                 <HBox.margin>
+                                    <Insets right="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Label fx:id="songCounterLabel" layoutX="10.0" layoutY="10.0" text="0" />
+                           </children>
+                        </HBox>
+                        <MFXProgressSpinner fx:id="loadingSpinner" visible="false" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <HBox>
+               <children>
+                  <Label text="Downloaded:  " />
+                  <Label fx:id="downloadLabel" layoutX="10.0" layoutY="10.0" text="..." />
+               </children>
+            </HBox>
+            <MFXProgressBar fx:id="downloadProgress" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="20.0" prefWidth="760.0" progress="0.0" VBox.vgrow="ALWAYS" />
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

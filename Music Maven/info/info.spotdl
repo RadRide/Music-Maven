@@ -1,0 +1,38 @@
+[
+    {
+        "name": "Higher",
+        "artists": [
+            "Fame on Fire"
+        ],
+        "artist": "Fame on Fire",
+        "genres": [
+            "post-screamo"
+        ],
+        "disc_number": 1,
+        "disc_count": 1,
+        "album_name": "Higher",
+        "album_artist": "Fame on Fire",
+        "album_type": "single",
+        "duration": 279,
+        "year": 2024,
+        "date": "2024-01-15",
+        "track_number": 1,
+        "tracks_count": 1,
+        "song_id": "0ecGJk7C5t3WPeSvTqRTUU",
+        "explicit": false,
+        "publisher": "Hopeless Records",
+        "url": "https://open.spotify.com/track/0ecGJk7C5t3WPeSvTqRTUU",
+        "isrc": "USHR22412701",
+        "cover_url": "https://i.scdn.co/image/ab67616d0000b27324c93c37ef325df6bc616be8",
+        "copyright_text": "2024 Hopeless Records, Inc.",
+        "download_url": null,
+        "lyrics": null,
+        "popularity": 40,
+        "album_id": "6VBQDpC6peZu8nhjENZmEr",
+        "list_name": null,
+        "list_url": null,
+        "list_position": null,
+        "list_length": null,
+        "artist_id": "10Z7WzKMeIdNBKexi1YarP"
+    }
+]

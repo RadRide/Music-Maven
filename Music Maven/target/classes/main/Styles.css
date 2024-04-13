@@ -1,0 +1,68 @@
+*{
+    -fx-black: #181818;
+    -fx-green: #7a0ed9;
+    -fx-white: #fefefe;
+}
+
+.background{
+    -fx-background-color: -fx-black;
+}
+
+.textField{
+    -fx-background-color: transparent;
+
+    -fx-border-color: -fx-white;
+
+    -fx-text-fill: -fx-white;
+    -fx-font-weight: bold;
+    -fx-font-size: 15;
+
+    -mfx-float-mode: BORDER;
+}
+.textField .floating-text{
+    -fx-background-color: -fx-black;
+
+    -fx-text-fill: -fx-white;
+    -fx-font-size: 17;
+}
+.textField:focus-within{
+    -fx-border-color: -fx-green;
+    -fx-text-fill: -fx-green;
+}
+.textField:focus-within .floating-text{
+    -fx-text-fill: -fx-green;
+    -fx-background-color: -fx-black;
+}
+
+.btn{
+    -fx-background-color: transparent;
+    -fx-background-radius: 10;
+
+    -fx-border-width: 1;
+    -fx-border-style: solid;
+    -fx-border-radius: 10;
+    -fx-border-color: -fx-white;
+
+    -fx-text-fill: -fx-white;
+    -fx-font-weight: bold;
+    -fx-font-size: 17;
+}
+.btn:hover{
+    -fx-border-color: -fx-green;
+    -fx-text-fill: -fx-green;
+}
+.btn .mfx-ripple-generator {
+    -mfx-ripple-color: -fx-green;
+}
+.btn .ikonli-font-icon{
+    -fx-icon-color: -fx-white;
+}
+.btn:hover .ikonli-font-icon{
+    -fx-icon-color: -fx-green;
+}
+
+.label{
+    -fx-text-fill: -fx-white;
+    -fx-font-size: 15;
+    -fx-font-weight: bold;
+}
